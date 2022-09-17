@@ -10,8 +10,9 @@
       type="image/x-icon"
       href="./asset/img/banner/sontungmtp1.png"
     />
-    <link rel="stylesheet" href="asset/css/style.css" />
-    <script src="/asset/javacrip/styles.js"></script>
+    <link rel="stylesheet" href="./asset/css/grid.css" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/responsive.css" />
     <link
       rel="stylesheet"
       href="./asset/font/themify-icons/themify-icons.css"
@@ -39,11 +40,17 @@
           </li>
         </ul>
         <!-- End: Nav -->
-        <!-- Begin :Search button -->
+        <!-- Search button -->
         <div class="search-bnt">
           <i class="search-icon ti-search"></i>
         </div>
-        <!-- End: Search button -->
+        <!--  Search button -->
+
+        <!-- Menu button -->
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-view-list"></i>
+        </div>
+        <!-- Menu button -->
       </div>
       <div id="slider">
         <div class="text-content">
@@ -66,7 +73,7 @@
           </p>
           <div class="row banner-list">
             <!-- ảnh 1 -->
-            <div class="col col-third text-center">
+            <div class="col col-third s-col-full mt-32 text-center">
               <p class="banner-name">Son Tung MTP</p>
               <img
                 src="/asset/img/banner/tung2.jpg"
@@ -75,7 +82,7 @@
               />
             </div>
             <!-- ảnh 2 -->
-            <div class="col col-third text-center">
+            <div class="col col-third s-col-full mt-32 text-center">
               <p class="banner-name">Son Tung MTP</p>
               <img
                 src="/asset/img/banner/tung2.jpg"
@@ -84,7 +91,7 @@
               />
             </div>
             <!-- ảnh 3 -->
-            <div class="col col-third text-center">
+            <div class="col col-third s-col-full mt-32 text-center">
               <p class="banner-name">Son Tung MTP</p>
               <img
                 src="/asset/img/banner/tung2.jpg"
@@ -109,7 +116,7 @@
             <!-- Map -->
             <div class="map-list">
               <!-- Map-HaNoi -->
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="./asset/img/maptour/maphanoi.jpg"
                   alt="Hà Nội"
@@ -119,11 +126,11 @@
                   <h3 class="map-heading">Ha Noi</h3>
                   <p class="map-time">Ngay 26 Thang 11 Nam 2023</p>
                   <p class="map-desc">Sky Ha Noi Oi</p>
-                  <button class="bnt js-buy-tickets">Mua Ve</button>
+                  <a href="#" class="bnt s-full-width js-buy-ticket">Mua Ve</a>
                 </div>
               </div>
               <!-- Map-DaNang -->
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="./asset/img/maptour/mapdanang.jpg"
                   alt="Hà Nội"
@@ -133,11 +140,11 @@
                   <h3 class="map-heading">Dang Nang</h3>
                   <p class="map-time">Ngay 28 Thang 11 Nam 2023</p>
                   <p class="map-desc">Sky Da Nang Oi</p>
-                  <button class="bnt js-buy-tickets">Mua Ve</button>
+                  <a href="#" class="bnt s-full-width js-buy-ticket">Mua Ve</a>
                 </div>
               </div>
               <!-- Map-HCM -->
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="./asset/img/maptour/maphochiminh.jpg"
                   alt="Hà Nội"
@@ -147,7 +154,7 @@
                   <h3 class="map-heading">Ho Chi Minh</h3>
                   <p class="map-time">Ngay 30 Thang 11 Nam 2023</p>
                   <p class="map-desc">Sky Ho Chi Minh Oi</p>
-                  <button class="bnt js-buy-tickets">Mua Ve</button>
+                  <a href="#" class="bnt s-full-width js-buy-ticket">Mua Ve</a>
                 </div>
               </div>
             </div>
@@ -167,31 +174,37 @@
           <p class="section-heading-sub">We Love Sky</p>
 
           <div class="row contact-content">
-            <div class="col col-half contact-info">
+            <div class="col col-half s-col-full contact-info">
               <p><i class="ti-location-pin"></i> Ho Chi Minh</p>
-              <p><i class="ti-mobile"></i> 000099990000</p>
-              <p><i class="ti-email"></i> mail123@gmail.com</p>
+              <p>
+                <i class="ti-mobile"></i> Phone:
+                <a href="tell:0000090000">0000090000</a>
+              </p>
+              <p>
+                <i class="ti-email"></i>Email:
+                <a href="mailto:mail123@gmail.com"> mail123@gmail.com</a>
+              </p>
             </div>
-            <div class="col col-half contact-form">
+            <div class="col col-half s-col-full contact-form">
               <form action="">
                 <div class="row">
-                  <div class="col col-half">
+                  <div class="col col-half s-col-full">
                     <input
                       type="text"
                       name=""
                       placeholder="Tên Người Gửi"
                       required
-                      id=""
+                      id="contact-name"
                       class="contact-control"
                     />
                   </div>
-                  <div class="col col-half">
+                  <div class="col col-half s-col-full s-mt-8">
                     <input
                       type="email"
                       name=""
                       placeholder="Email...."
                       required
-                      id=""
+                      id="contact-email"
                       class="contact-control"
                     />
                   </div>
@@ -199,17 +212,17 @@
                 <div class="row mt-8">
                   <div class="col col-full">
                     <input
-                      type="messager"
+                      type="text"
                       name=""
                       placeholder="Lời Nhắn...."
                       required
-                      id=""
+                      id="contact-messager"
                       class="contact-control"
                     />
                   </div>
                 </div>
                 <input
-                  class="btn pull-right mt-16"
+                  class="btn pull-right mt-16 s-full-width"
                   type="submit"
                   value="Send"
                 />
@@ -248,7 +261,7 @@
           Tickets
         </header>
         <div class="modal-body">
-          <label for="quantity" class="modal-lable">
+          <label for="tickets-quantity" class="modal-lable">
             <i class="ti-shopping-cart"></i>
             Vé, 200.000 VND
           </label>
@@ -260,7 +273,7 @@
           />
           <!-- Mua Vé -->
 
-          <label for="" class="modal-lable">
+          <label for="tickets-email" class="modal-lable">
             <i class="ti-user"></i>
             Nhập nơi nhận
           </label>
@@ -287,8 +300,7 @@
         Tablet: >=740px & < 1024px
         Mobile: < 740px 
       -->
-    <h2 class="pc">PC</h2>
-    <h2 class="tablet">TABLET</h2>
-    <h2 class="mobile">MOBILE</h2>
+
+    <script src="./asset/javacrip/styles.js"></script>
   </body>
 </html>

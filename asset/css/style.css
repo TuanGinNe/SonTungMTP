@@ -33,7 +33,10 @@ html {
   color: #fff;
   padding: 11px 16px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 15px;
+  border: none;
+  /* text-align: center; */
+  margin: 20px;
 }
 
 .bnt:hover {
@@ -45,6 +48,11 @@ html {
   margin-right: -8px;
 }
 
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .mt-8 {
   margin-top: 8px !important;
 }
@@ -53,10 +61,8 @@ html {
   margin-top: 16px !important;
 }
 
-.row::after {
-  content: "";
-  display: block;
-  clear: both;
+.mt-32 {
+  margin-top: 32px !important;
 }
 .col {
   float: left;
@@ -137,7 +143,7 @@ html {
 
 #nav .subnav a {
   color: black;
-  padding: 12px;
+  padding: 0 35px;
   line-height: 38px;
 }
 
@@ -145,26 +151,35 @@ html {
   font-size: 12px;
 }
 
-/* #header .search-btn:hover {
-  background-color: #f44336;
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-#header .search-btn {
+
+#header .mobile-menu-btn,
+#header .search-bnt {
   float: right;
-  display: block;
+  padding: 0 21px;
+}
+
+#header .search-bnt:hover {
+  background-color: #f44336;
   cursor: pointer;
-} */
+}
+
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon {
+  color: red;
+}
+
+#header .menu-icon,
 #header .search-icon {
   font-size: 20px;
   color: #fff;
-  float: right;
-  display: block;
-  cursor: pointer;
   line-height: 46px;
-  padding: 0 45px;
-  margin-top: -39px;
-}
-#header .search-icon:hover {
-  background-color: #f44336;
 }
 
 #slider {
@@ -180,17 +195,12 @@ html {
   color: #fff;
   width: 100%;
   text-align: center;
-  /* right: 0;
-  left: 0; */
-  /* left: 50%;
-  transform: translateX(-50%); */
   color: black;
   font-size: 25px;
 }
 #slider .text-heading {
   font-weight: 500;
   font-size: 25px;
-  /* margin-bottom: 10px; */
 }
 #slider .text-descriptiob {
   margin-top: 15px;
@@ -228,17 +238,8 @@ html {
 }
 
 #content .banner-list {
-  padding-top: 48px;
+  padding-top: 32px;
 }
-
-/* #content .banner-items {
-  /* float: left;
-  width: 33.33333%; */
-/* text-align: center; */
-/* padding-bottom: 50px; */
-/* overflow: hidden; */
-/* width: calc(100% / 3); 
-}*/
 
 #content .banner-name {
   font-size: 15px;
@@ -288,12 +289,7 @@ html {
 /*Map*/
 
 .map-list {
-  /* margin-top: 32px;
-  margin-left: -8px;
-  margin-right: -8px; */
-  /* margin: 32px -8px 48px; */
-  /* padding-bottom: 48px; */
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .map-img {
@@ -337,6 +333,14 @@ html {
   display: inline-block;
 }
 
+.contact-info a {
+  color: #101aef;
+  opacity: 0.8;
+}
+
+.contact-info a:hover {
+  opacity: 1;
+}
 .contact-form {
   font-size: 15px;
 }
@@ -362,8 +366,8 @@ html {
 }
 
 /* Map Section */
-.map-section {
-  max-width: 100%;
+.map-section img {
+  width: 100%;
   background: url(/asset/img/banner/tung4.jpg) top center / cover no-repeat;
   position: relative;
 }
@@ -381,15 +385,20 @@ html {
   text-decoration: none;
 }
 
-#footer .copyright a,
+#footer .copyright a:hover,
 #footer .socials-list a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #footer .copyright {
   margin-top: 15px;
   color: rgba(0, 0, 0, 0.6);
 }
+
+#footer .copyright a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 /* Contact form*/
 .contact-content {
   margin-top: 48px;
@@ -408,7 +417,7 @@ html {
   background: rgba(0, 0, 0, 0.4);
   align-items: center;
   justify-content: center;
-  /* display: none; */
+  display: none;
 }
 
 .modal-container {
@@ -417,7 +426,7 @@ html {
   max-width: calc(100% - 32px);
   min-height: 200px;
   position: relative;
-  animation: modalFadeIn ease 0.5s;
+  animation: modalfadeIn ease 0.5s;
 }
 
 .modal-header {
@@ -440,7 +449,6 @@ html {
   top: 0;
   padding: 12px;
   color: #fff;
-  cursor: pointer;
   opacity: 0.8;
 }
 
@@ -473,7 +481,7 @@ html {
   border: none;
   color: #fff;
   width: 100%;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Viết chữ đậm */
   font-size: 15px;
   padding: 18px;
 }
@@ -506,42 +514,3 @@ html {
     transform: translate(0);
   }
 }
-
-/*Media queries*/
-
-.pc,
-.tablet,
-.mobile {
-  font-size: 50px;
-  display: none;
-  color: red;
-}
-
-/* Break-Point */
-@media (max-width: 740px) {
-  /* CSS */
-  /* độ rộng tối đa */
-  .mobile {
-    display: block;
-  }
-}
-
-@media (min-width: 740px) and (max-width: 1023px) {
-  /* CSS */
-  /* độ rộng tối đa */
-  .tablet {
-    display: block;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* CSS */
-  /* độ rộng tối đa */
-  .pc {
-    display: block;
-  }
-}
-/* @media (min-width: 800px) {
-  /* CSS */
-/* độ rộng tối thiểu 
-} */
